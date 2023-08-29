@@ -1,0 +1,24 @@
+.summary {
+    display: flex;
+    justify-content: center;
+}
+
+.summary p {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 6px 0;
+    color: #fff;
+}
+
+.summary p.red {
+    background-color: red;
+}
+
+.summary p.yellow {
+    background-color: yellow;
+}
+
+.summary p.green {
+    background-color: green;
+}

@@ -1,0 +1,28 @@
+.question-title {
+    margin: 10px 0;
+}
+
+.questions-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.questions-list .list-group-item {
+    width: auto;
+    margin-right: 10px;
+    border: 1px solid #198754;
+    border-radius: 5px;
+    color: #198754;
+}
+
+.active-quiz .list-group-item:hover,
+.questions-list .list-group-item.active {
+    background-color: #198754;
+    cursor: pointer;
+    color: #fff;
+}
+
+.questions-list .list-group-item.wrong {
+    background-color: red;
+    color: #fff;
+}
