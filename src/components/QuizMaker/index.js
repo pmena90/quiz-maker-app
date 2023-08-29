@@ -20,7 +20,6 @@ const QuizMaker = () => {
     const canCreate = category !== -1 && difficulty !== '';
 
     useEffect(() => {
-        console.log('rendered');
         setIsLoading(true);
 
         quizService.getCategories().then(data => {

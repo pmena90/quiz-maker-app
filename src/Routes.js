@@ -9,13 +9,11 @@ const QuizCompleted = lazy(() => import('./components/QuizCompleted'));
 const AppRoutes = () => {
 
     return (
-        <>
-            <Routes>
-                <Route path="/" element={<QuizMaker />} />
-                <Route path="/result" element={<QuizResultGuard><QuizCompleted /></QuizResultGuard>} />
-                <Route path="*" element={<NoMatchPage />} />
-            </Routes>
-        </>
+        <Routes>
+            <Route path="/" element={<QuizMaker />} />
+            <Route path="/result" element={<QuizResultGuard><QuizCompleted /></QuizResultGuard>} />
+            <Route path="*" element={<NoMatchPage />} />
+        </Routes>
     );
 };
 
