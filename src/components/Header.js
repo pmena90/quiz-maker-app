@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom/dist';
+import { NavLink } from 'react-router-dom/dist';
 import logo from '../logo.svg';
 
 function Header() {
