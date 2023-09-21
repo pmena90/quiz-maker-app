@@ -5,18 +5,18 @@ import AppRoutes from './Routes';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { QuizProvider } from './contexts/QuizContext';
+import AppProvider from './AppProvider';
 
 function App() {
   return (
     <div>
       <ToastContainer />
       <Header />
-      <QuizProvider>
+      <AppProvider>
         <Suspense fallback={<div className="container">Loading...</div>}>
           <AppRoutes />
         </Suspense>
-      </QuizProvider>
+      </AppProvider>
     </div>
   );
 }

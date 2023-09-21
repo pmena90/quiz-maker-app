@@ -14,7 +14,8 @@ function Header() {
                 </NavLink>
                 <div className='collapse navbar-collapse' id='navbarTogglerDemo02' >
                     <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
-                        {/* Menu links here */}
+                        <NavLink className='nav-link' to='storage-demo'>Storage Demo</NavLink>
+                        <NavLink className='nav-link' to='modal-demo'>Modal Demo</NavLink>
                     </ul>
                 </div>
             </div>
