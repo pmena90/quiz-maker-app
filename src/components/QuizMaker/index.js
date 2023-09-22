@@ -55,7 +55,7 @@ const QuizMaker = () => {
     }
 
     return (
-        isLoading && categories === [] ? <div>Loading...</div> : <div className="container">
+        isLoading && categories.length === 0 ? <div>Loading...</div> : <div className="container">
             <div className="row">
                 <Pagetitle title='QUIZ MAKER' />
             </div>

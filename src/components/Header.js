@@ -16,6 +16,7 @@ function Header() {
                     <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
                         <NavLink className='nav-link' to='storage-demo'>Storage Demo</NavLink>
                         <NavLink className='nav-link' to='modal-demo'>Modal Demo</NavLink>
+                        <NavLink className='nav-link' to='autofilter-demo'>Autofilter Demo</NavLink>
                     </ul>
                 </div>
             </div>

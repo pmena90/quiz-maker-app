@@ -1,0 +1,16 @@
+.btn-close-container {
+    padding: 10px;
+    background-color: black;
+}
+
+.photo-container {
+    position: relative;
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.btn-close-container {
+    position: absolute;
+    right: 0;
+}

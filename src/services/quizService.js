@@ -1,10 +1,14 @@
-import httpService from './httpService';
+import createHttpService from './httpService';
 import handleHttpError from './errorHandler';
 
 export const quizService = {
     getCategories,
     getTrivia
 };
+
+
+const API_BASE_URL = 'https://opentdb.com/';
+const httpService = createHttpService(API_BASE_URL);
 
 export function getCategories(config = {}) {
     return httpService.get(`/api_category.php`, config)
