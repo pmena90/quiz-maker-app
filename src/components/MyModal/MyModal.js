@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import './style.css';
 
 const MyModal = ({ backdrop, showModal, setShowModal, children }) => {
     const [visible, setVisible] = useState(showModal);
     const [show, setShow] = useState(showModal);
-
-    const closeModal = () => {
-        setShowModal(false);
-    };
+    const modalRef = useRef(null);
 
     useEffect(() => {
         // Add a delay before showing the modal to allow the fade-in animation
@@ -16,6 +14,7 @@ const MyModal = ({ backdrop, showModal, setShowModal, children }) => {
             setShow(showModal);
             timeout = setTimeout(() => {
                 setVisible(showModal);
+                modalRef.current.focus();
             }, 100);
         } else {
             setVisible(showModal);
@@ -28,11 +27,21 @@ const MyModal = ({ backdrop, showModal, setShowModal, children }) => {
 
     }, [showModal]);
 
+    const closeModal = () => {
+        setShowModal(false);
+    };
+
+    const handleKeyPress = target => {
+        if (target.code === 'Escape') {
+            closeModal();
+        }
+    };
+
     return (
-        <div>
+        <div onKeyUp={handleKeyPress}>
 
             {/* Modal */}
-            <div className={`modal fade ${visible ? 'show' : ''}`} tabIndex="-1" role="dialog" style={{ display: show ? 'block' : 'none' }} data-backdrop={backdrop}>
+            <div ref={modalRef} className={`custom-modal modal fade ${visible ? 'show' : ''}`} tabIndex="-1" role="dialog" style={{ display: show ? 'block' : 'none' }} data-backdrop={backdrop} aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         {children}

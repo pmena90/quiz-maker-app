@@ -6,7 +6,7 @@ import QuizResultGuard from './guards/QuizResultGuard';
 
 const QuizCompleted = lazy(() => import('./components/QuizCompleted'));
 const StorageDemo = lazy(() => import('./components/StorageDemo'));
-const ModalDemo = lazy(() => import('./components/ModalDemo'));
+const ModalDemoPage = lazy(() => import('./components/ModalDemoPage'));
 
 const AppRoutes = () => {
 
@@ -15,7 +15,7 @@ const AppRoutes = () => {
             <Route path="/" element={<QuizMaker />} />
             <Route path="/result" element={<QuizResultGuard><QuizCompleted /></QuizResultGuard>} />
             <Route path="/storage-demo" element={<StorageDemo />} />
-            <Route path="/modal-demo" element={<ModalDemo />} />
+            <Route path="/modal-demo" element={<ModalDemoPage />} />
             <Route path="*" element={<NoMatchPage />} />
         </Routes>
     );

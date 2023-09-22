@@ -1,0 +1,8 @@
+.custom-modal[data-backdrop="false"] {
+    height: auto;
+    /*add what you want here*/
+}
+
+.custom-modal[data-backdrop="false"] .modal-dialog {
+    margin-bottom: 0;
+}
